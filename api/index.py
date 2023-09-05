@@ -4,27 +4,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-todos = [
-     {
-    "id": "1",
-    "title":
-      " buy pizza dough from store ",
-    "status": False,
-    "date": "2023-05-03",
-  },
-  {
-    "id": "2",
-    "title": " get soup packets from mall",
-    "status": True,
-    "date": "2023-04-03",
-  },
-  {
-    "id": "3",
-    "title": "Get Clothes from laundry",
-    "status": False,
-    "date": "2023-06-20",
-  },
-]
+todos = []
 
 @app.route("/api/todos", methods=["GET"])
 def get_all_todo_items():
